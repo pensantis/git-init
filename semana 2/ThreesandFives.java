@@ -5,10 +5,11 @@ class ThreesandFives{
       value = Integer.parseInt(args[0]);
     }
 
-    int size1 = (int)((value * 6)/15) + 2;
+    int size1 = ((value * 6)/15) + 2;
     int size2 = (int)(value / 15);
 
-    //System.out.println(size1 + " " + size2);
+    //System.out.println(size1 + " " + size3);
+    System.out.println(value % 3);
 
     int[] threesOrFives = new int[size1];
     int[] thressAndFives = new int[size2];
