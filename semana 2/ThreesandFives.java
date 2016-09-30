@@ -5,11 +5,18 @@ class ThreesandFives{
       value = Integer.parseInt(args[0]);
     }
 
-    int size1 = ((value * 6)/15) + 2;
-    int size2 = (int)(value / 15);
+    int size1 = ((6 * value)/15);
+    int size2 = value / 15;
+
+    if(value % 15 > 5 && value % 15 != 8){
+      size1++;
+    }
+    if(value % 15 == 12){
+      size1++;
+    }
 
     //System.out.println(size1 + " " + size3);
-    System.out.println(value % 3);
+    //System.out.println(value % 3);
 
     int[] threesOrFives = new int[size1];
     int[] thressAndFives = new int[size2];
@@ -33,9 +40,9 @@ class ThreesandFives{
     }
     System.out.println("Thress or fives");
     for(int a = 0; a < threesOrFives.length; a++){
-      if(threesOrFives[a] != 1){
-        System.out.println(threesOrFives[a]);
-      }
+
+      System.out.println(threesOrFives[a]);
+
     }
   }
 }
